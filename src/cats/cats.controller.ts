@@ -6,7 +6,8 @@ import { Cat } from "./interfaces/cat.interface";
 @Controller('cats')
 export class CatsController {
     constructor(private catsService: CatsService) {}
-    @Post()
+
+    @Post('a')
     create(@Body() createCatDto: CreateCatDto) {
         return 'this action adds a new cat';
     }
